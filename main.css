@@ -1,55 +1,62 @@
 .weatherWidget {
-	box-sizing: border-box;
-	width: 160px;
-	display: inline-block;
-	padding: 20px;
-	font-family: arial, sans-serif;
-	color: #555;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 160px;
+    display: inline-block;
+    padding: 20px;
+    font-family: arial, sans-serif;
+    color: #555;
 }
 
 .city {
-	font-size: 18px;
-	font-weight: bold;
-	padding: 4px 0 4px 0;
-	border-bottom: solid 1px #ccc;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px 0 4px 0;
+    border-bottom: solid 1px #ccc;
 }
 
 .temperature {
-	height: 77px;
-	display: flex;
-    align-items: center;
+    height: 77px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 10px;
 }
 
 .temperature__current {
-	width: 100%;
-	font-size: 38px;
-	display: flex;
+    width: 100%;
+    font-size: 38px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .temperature__current:after {
-	content: "\2103";
-	font-size: 12px;
-	margin-top: 8px;
+    content: "\2103";
+    font-size: 12px;
+    margin-top: 8px;
     font-weight: bold;
 }
 
 .temperature__img {
-	width: 45px;
+    width: 45px;
 }
 
 .otherParameters {
-	font-size: 13px;
-	font-weight: bold;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .otherParameters div:nth-child(2n) {
-	margin: 4px 0 4px 0;
+    margin: 4px 0 4px 0;
 }
 
 .otherParameters div:before {
-	width: 14px;
-	margin-right: 7px;
+    width: 14px;
+    margin-right: 7px;
     display: inline-block;
 }
 
@@ -58,9 +65,22 @@
 }
 
 .otherParameters__windSpeed:before {
-	content: url(svg/windSpeed.svg);
+    content: url(svg/windSpeed.svg);
 }
 
 .otherParameters__pressure:before {
-	content: url(svg/pressure.svg);
+    content: url(svg/pressure.svg);
+}.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
 }

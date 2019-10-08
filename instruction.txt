@@ -1,0 +1,34 @@
+Для установки виджета:
+
+1. Скопировать из index.html
+
+<div class="weatherWidget">
+    <div class="city">
+        <div class="city__name"></div>
+    </div>
+    <div class="temperature">
+        <div class="temperature__current"></div>
+        <img class="temperature__img" src="" alt="">
+    </div>
+    <div class="otherParameters">
+        <div class="otherParameters__humidity"></div>
+        <div class="otherParameters__windSpeed"></div>
+        <div class="otherParameters__pressure"></div>
+    </div>
+</div>
+
+2. Скопировать файлы main.css и main.js в соответствующие директории своего проекта.
+
+3. Установить в проект библиотеку Jquery
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+4. Прописать стили и скрипты в соответствии с расположением их в директориях проекта.
+
+<link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+
+<script type="text/javascript" src="main.js"></script>
+
+5. Скопировать медиа файлы из папки svg. При необходимост в стилях переназначить пути к медиа файлам.
+
+Для изменения города, в файле main.js переменной URL изменить lat=48.7107&lon=44.5168 на координаты соответствующие нужному населенному пункту.
