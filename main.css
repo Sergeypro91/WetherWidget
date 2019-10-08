@@ -1,0 +1,66 @@
+.weatherWidget {
+	box-sizing: border-box;
+	width: 160px;
+	display: inline-block;
+	padding: 20px;
+	font-family: arial, sans-serif;
+	color: #555;
+}
+
+.city {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 4px 0 4px 0;
+	border-bottom: solid 1px #ccc;
+}
+
+.temperature {
+	height: 77px;
+	display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.temperature__current {
+	width: 100%;
+	font-size: 38px;
+	display: flex;
+}
+
+.temperature__current:after {
+	content: "\2103";
+	font-size: 12px;
+	margin-top: 8px;
+    font-weight: bold;
+}
+
+.temperature__img {
+	width: 45px;
+}
+
+.otherParameters {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.otherParameters div:nth-child(2n) {
+	margin: 4px 0 4px 0;
+}
+
+.otherParameters div:before {
+	width: 14px;
+	margin-right: 7px;
+    display: inline-block;
+}
+
+.otherParameters__humidity:before {
+    content: url(svg/humidity.svg);
+}
+
+.otherParameters__windSpeed:before {
+	content: url(svg/windSpeed.svg);
+}
+
+.otherParameters__pressure:before {
+	content: url(svg/pressure.svg);
+}
