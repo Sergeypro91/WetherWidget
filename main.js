@@ -10,9 +10,11 @@ $(document).ready(function() {
     
     var city = data.name;
     var temperature = Math.round(data.main.temp);
+
     if (temperature > 0) {
         temperature = '+' + temperature;
         } 
+
     var humidity = data.main.humidity + ' %';
     var windSpeed = Math.round(data.wind.speed) + ' м/с';
     var pressure = Math.round(data.main.pressure) + ' мм рт.ст.';
@@ -45,6 +47,6 @@ $(document).ready(function() {
       weather(city[i]);
       i = 0;
     }
-  }, 4000);
-       
+
+  }, 4000);      
 });
