@@ -4,18 +4,37 @@
 
 <div class="weatherWidget">
     <div class="city">
-        <div class="city__name"></div>
+        <div class="city__name hide"></div>
     </div>
     <div class="temperature">
-        <div class="temperature__current"></div>
-        <img class="temperature__img" src="" alt="">
+        <div class="temperature__current">
+            <div class="temperature__plus-or-minus hide"></div>
+            <div class="temperature__numbers hide"></div>
+        </div>
+        <img class="temperature__img hide" src="" alt="">
     </div>
     <div class="otherParameters">
-        <div class="otherParameters__humidity"></div>
-        <div class="otherParameters__windSpeed"></div>
-        <div class="otherParameters__pressure"></div>
+        <div class="otherParameters__child">
+            <img src="svg/humidity.svg" alt="" class="otherParameters__child-icon">
+            <div class="otherParameters__humidity hide"></div>
+        </div>
+        <div class="otherParameters__child">
+            <img src="svg/windSpeed.svg" alt="" class="otherParameters__child-icon">
+            <div class="otherParameters__windSpeed hide"></div>
+        </div>
+        <div class="otherParameters__child">
+            <img src="svg/pressure.svg" alt="" class="otherParameters__child-icon">
+            <div class="otherParameters__pressure hide"></div>
+        </div>
     </div>
 </div>
+<div class="video--weatherWidget">
+    <video muted="" autoplay="autoplay" loop="loop" playsinline="true">
+        <source src="video/widget.mp4">
+    </video>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
 
 2. Скопировать файлы "main.css" и "main.js" в соответствующие директории своего проекта.
 
@@ -26,7 +45,6 @@
 4. Прописать стили и скрипты в соответствии с расположением их в директориях проекта.
 
 <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
-
 <script type="text/javascript" src="main.js"></script>
 
 5. Скопировать медиа файлы из папки svg. При необходимост в стилях переназначить пути к медиа файлам.
