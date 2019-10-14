@@ -1,22 +1,33 @@
+body {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 .weatherWidget {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 160px;
+    height: 172px;
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
     font-family: arial, sans-serif;
-    color: #555;
+    background: #edeceb;
+    color: #6f6e6d;
 }
 
 .city {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     padding: 4px 0 4px 0;
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px #dedede;
 }
 
 .temperature {
-    height: 77px;
+    height: 65px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -28,13 +39,30 @@
 
 .temperature__current {
     width: 100%;
-    font-size: 38px;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
 
-.temperature__current:after {
+.temperature__plus-or-minus {
+    font-size: 26px;
+}
+
+.temperature__numbers {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 38px;
+
+}
+
+.temperature__numbers:after {
     content: "\2103";
     font-size: 12px;
     margin-top: 8px;
@@ -46,7 +74,7 @@
 }
 
 .otherParameters {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -57,23 +85,22 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-}
-
-.otherParameters .otherParameters__child:nth-child(2n) {
-    margin: 4px 0 4px 0;
+    line-height: 15px;
+    color: #989796;
 }
 
 .otherParameters__child-icon {
-    width: 14px;
+    width: 10px;
     margin-right: 7px;
-    display: inline-block; 
+    display: inline-block;
+    opacity: 0.5;
 }
 
 .show {
   opacity: 1;
-  -webkit-transition: opacity 1000ms;
-  -o-transition: opacity 1000ms;
-  transition: opacity 1000ms;
+  -webkit-transition: opacity 1500ms;
+  -o-transition: opacity 1500ms;
+  transition: opacity 1500ms;
 }
 
 .hide {
@@ -81,4 +108,17 @@
   -webkit-transition: opacity 500ms;
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
+}.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
 }

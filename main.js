@@ -10,19 +10,24 @@ $(document).ready(function() {
     
     var city = data.name;
     var temperature = Math.round(data.main.temp);
+    var temperaturePlusOrMinus;
 
     if (temperature > 0) {
-        temperature = '+' + temperature;
-        } 
+        temperaturePlusOrMinus = '+';
+      } else if (temperature < 0) {
+        temperaturePlusOrMinus = '-';
+        temperature = Math.abs(temperature);
+      }
 
-    var humidity = data.main.humidity + ' %';
+    var humidity = data.main.humidity + '%';
     var windSpeed = Math.round(data.wind.speed) + ' м/с';
     var pressure = Math.round(data.main.pressure) + ' мм рт.ст.';
     var icon = data.weather[0].icon;
     var iconUrl = 'https://openweathermap.org/img/wn/' + icon + '@2x.png';
     
     $('.city__name').html(city).addClass('show').removeClass('hide');
-    $('.temperature__current').html(temperature).addClass('show').removeClass('hide');
+    $('.temperature__numbers').html(temperature).addClass('show').removeClass('hide');
+    $('.temperature__plus-or-minus').html(temperaturePlusOrMinus).addClass('show').removeClass('hide');
     $('.otherParameters__humidity').html(humidity).addClass('show').removeClass('hide');
     $('.otherParameters__windSpeed').html(windSpeed).addClass('show').removeClass('hide');
     $('.otherParameters__pressure').html(pressure).addClass('show').removeClass('hide');
@@ -34,12 +39,13 @@ $(document).ready(function() {
 
     setTimeout(function(){
       hideBlock('.city__name');
-      hideBlock('.temperature__current');
+      hideBlock('.temperature__numbers');
+      hideBlock('.temperature__plus-or-minus');
       hideBlock('.otherParameters__humidity');
       hideBlock('.otherParameters__windSpeed');
       hideBlock('.otherParameters__pressure');
       hideBlock('.temperature__img');
-    }, 4000);
+    }, 4200);
   }
 
   weather('https://api.openweathermap.org/data/2.5/weather?lat=43.1151&units=metric&lon=131.8856&APPID=027b14fea92c2edbe2c6aca5c7994af5');
@@ -61,5 +67,5 @@ $(document).ready(function() {
       i = 0;
     }
 
-  }, 4500);      
+  }, 4700);      
 });

@@ -11,7 +11,10 @@
             <div class="city__name hide"></div>
         </div>
         <div class="temperature">
-            <div class="temperature__current hide"></div>
+            <div class="temperature__current">
+                <div class="temperature__plus-or-minus hide"></div>
+                <div class="temperature__numbers hide"></div>
+            </div>
             <img class="temperature__img hide" src="" alt="">
         </div>
         <div class="otherParameters">
@@ -29,7 +32,11 @@
             </div>
         </div>
     </div>
-
+    <div class="video--weatherWidget">
+        <video muted="" autoplay="autoplay" loop="loop" playsinline="true">
+            <source src="video/widget.mp4">
+        </video>
+    </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
 </body>
