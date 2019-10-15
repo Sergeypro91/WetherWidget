@@ -20,7 +20,9 @@ body {
 }
 
 .city {
+    height: 18px;
     font-size: 16px;
+    line-height: 24px;
     font-weight: bold;
     padding: 4px 0 4px 0;
     border-bottom: solid 1px #dedede;
@@ -49,6 +51,7 @@ body {
 
 .temperature__plus-or-minus {
     font-size: 26px;
+    padding-top: 3px;
 }
 
 .temperature__numbers {
@@ -85,6 +88,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 15px;
     line-height: 15px;
     color: #989796;
 }
@@ -97,15 +101,34 @@ body {
 }
 
 .show {
-  opacity: 1;
-  -webkit-transition: opacity 1500ms;
-  -o-transition: opacity 1500ms;
-  transition: opacity 1500ms;
+    opacity: 1;
+    -webkit-transition: 1500ms;
+    -o-transition: 1500ms;
+    transition: 1500ms;
 }
 
 .hide {
-  opacity: 0;
-  -webkit-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
+    opacity: 0;
+    -webkit-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+.hide--city {
+    padding-top: 3px;
+    opacity: 0;
+    -webkit-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+.hide--opc {
+    line-height: 7px;
+    opacity: 0;
+    -webkit-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+    -webkit-transition: line-height 1s;
+    -o-transition: line-height 1s;
+    transition: line-height 1s;
 }

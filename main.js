@@ -25,26 +25,22 @@ $(document).ready(function() {
     var icon = data.weather[0].icon;
     var iconUrl = 'https://openweathermap.org/img/wn/' + icon + '@2x.png';
     
-    $('.city__name').html(city).addClass('show').removeClass('hide');
+    $('.city__name').html(city).addClass('show').removeClass('hide--city');
     $('.temperature__numbers').html(temperature).addClass('show').removeClass('hide');
     $('.temperature__plus-or-minus').html(temperaturePlusOrMinus).addClass('show').removeClass('hide');
-    $('.otherParameters__humidity').html(humidity).addClass('show').removeClass('hide');
-    $('.otherParameters__windSpeed').html(windSpeed).addClass('show').removeClass('hide');
-    $('.otherParameters__pressure').html(pressure).addClass('show').removeClass('hide');
+    $('.otherParameters__humidity').html(humidity).addClass('show').removeClass('hide--opc');
+    $('.otherParameters__windSpeed').html(windSpeed).addClass('show').removeClass('hide--opc');
+    $('.otherParameters__pressure').html(pressure).addClass('show').removeClass('hide--opc');
     $('.temperature__img').attr('src', iconUrl).addClass('show').removeClass('hide');
 
-    function hideBlock(addClass) {
-      $(addClass).addClass('hide').removeClass('show');
-    }
-
     setTimeout(function(){
-      hideBlock('.city__name');
-      hideBlock('.temperature__numbers');
-      hideBlock('.temperature__plus-or-minus');
-      hideBlock('.otherParameters__humidity');
-      hideBlock('.otherParameters__windSpeed');
-      hideBlock('.otherParameters__pressure');
-      hideBlock('.temperature__img');
+      $('.city__name').html(city).addClass('hide--city').removeClass('show');
+      $('.temperature__numbers').html(temperature).addClass('hide').removeClass('show');
+      $('.temperature__plus-or-minus').html(temperaturePlusOrMinus).addClass('hide').removeClass('show');
+      $('.otherParameters__humidity').html(humidity).addClass('hide--opc').removeClass('show');
+      $('.otherParameters__windSpeed').html(windSpeed).addClass('hide--opc').removeClass('show');
+      $('.otherParameters__pressure').html(pressure).addClass('hide--opc').removeClass('show');
+      $('.temperature__img').attr('src', iconUrl).addClass('hide').removeClass('show');
     }, 4200);
   }
 
