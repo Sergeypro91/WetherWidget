@@ -13,7 +13,7 @@ body {
     width: 160px;
     height: 172px;
     display: inline-block;
-    padding: 10px;
+    padding: 10px 10px 10px 20px;
     font-family: arial, sans-serif;
     background: #edeceb;
     color: #6f6e6d;
